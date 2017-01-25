@@ -21,8 +21,14 @@ foreach ($top as $key => $value) {
 }
 ?>
 <h3 style="text-align: center;">Quel est le classement du film « Gravity » ?</h3>
+<?php
 
-
-
+foreach ($top as $key => $value) {
+	
+	if ($value['im:name']['label'] == "Gravity"){
+		echo "Gravity et a la position ".$key;
+	}
+}
+?>
 </body>
 </html>

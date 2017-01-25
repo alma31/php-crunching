@@ -16,11 +16,13 @@ $top = $brut["feed"]["entry"]; # liste de films
 foreach ($top as $key => $value) {
 	
 	if ($key <= 10){
-		echo ($value['im:name']['label']."</br>");
+		echo $key." ".$value['im:name']['label']."</br>";
 	}
-
 }
 ?>
+<h3 style="text-align: center;">Quel est le classement du film « Gravity » ?</h3>
+
+
 
 </body>
 </html>

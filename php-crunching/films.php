@@ -41,5 +41,19 @@ foreach ($top as $key => $value) {
 	}
 }
 ?>
+
+<h3 style="text-align: center;">Combien de films sont sortis avant 2000 ?</h3>
+</br>
+
+<?php
+foreach ($top as $key => $value) {
+	
+	if ($value['im:releaseDate']['label'] < 2000){
+		echo $key." ".$value['im:name']['label']."</br>";
+	}
+}
+?>
+
+
 </body>
 </html>

@@ -30,5 +30,16 @@ foreach ($top as $key => $value) {
 	}
 }
 ?>
+
+<h3 style="text-align: center;">Quel est le réalisateur du film « The LEGO Movie » ?</h3>
+</br>
+<?php
+foreach ($top as $key => $value) {
+	
+	if ($value['im:name']['label'] == "The LEGO Movie"){
+		echo $value['im:artist']['label'];
+	}
+}
+?>
 </body>
 </html>

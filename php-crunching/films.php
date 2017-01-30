@@ -46,13 +46,36 @@ foreach ($top as $key => $value) {
 </br>
 
 <?php
+$value = 0;
 foreach ($top as $key => $value) {
 	
 	if ($value['im:releaseDate']['label'] < 2000){
-		echo $key." ".$value['im:name']['label']."</br>";
+		echo $value['im:name']['label']++."</br>";
 	}
 }
 ?>
+
+<h3 style="text-align: center;"> Quel est le film le plus récent ? Le plus vieux ?</h3>
+</br>
+<h5 style="text-align: center;">Plus récent</h5>
+<?php 
+$tablo=[];
+foreach ($top as $key => $value) {
+	
+$date = $value['im:releaseDate']['label'];
+$nom = $value['im:name']['label'];
+$tablo[$date]=$nom;
+}
+ksort($tablo);
+
+// print_r($tablo);
+
+foreach ($tablo as $key => $value) {
+	echo $value;
+}
+
+
+ ?>
 
 
 </body>
